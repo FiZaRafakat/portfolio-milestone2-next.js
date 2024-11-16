@@ -1,11 +1,11 @@
 "use client"
-import About from "@/components/about";
-import Hero from "@/components/hero"
+import ProjectSection from '@/components/ProjectSection'
 import AOS from "aos"
 import "aos/dist/aos.css"
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
-export default function Home() {
+function Page() {
+
   useEffect(()=>{
     AOS.init({
        easing : "ease-out-back",
@@ -19,9 +19,10 @@ export default function Home() {
     },[])
 
   return (
-  <main>
-    <Hero />
-    <About />
-  </main>
-  );
+    <div className=''> 
+     <ProjectSection/>
+    </div>
+  )
 }
+
+export default Page
