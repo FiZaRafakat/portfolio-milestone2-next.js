@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={` ${playfair.variable} ${aclonica.variable} ${merienda.variable}` }>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white font-aclonica max-w-[1440px] mx-auto overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white font-aclonica max-w-[1440px] mx-auto overflow-x-hidden`}
       >
         <Header/>
         {children}
