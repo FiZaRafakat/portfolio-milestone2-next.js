@@ -26,7 +26,7 @@ const Services = () => {
     <div >
          <div className='text-center'>
       <div className='flex justify-center' id='services'><h2 className='h font-bold'>Services</h2></div>
-      <p className='p mx-auto max-w-[40rem] px-3 min-[420px]:px-8 '>I create tailored digital solutions that enhance your brand and deliver seamless, engaging user experiences. Explore my work and contact me to discuss how we can bring your vision to life.</p>
+      <p className='p mx-auto max-w-[40rem] sm:w-[30rem] px-3 min-[420px]:px-3 w-[20rem]  '>I create tailored digital solutions that enhance your brand and deliver seamless, engaging user experiences. Explore my work and contact me to discuss how we can bring your vision to life.</p>
       </div>
       <div>
   <div className="boxes md:py-10 py-3">

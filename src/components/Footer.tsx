@@ -7,7 +7,7 @@ const Footer = () => {
     <div className=''>
       <div className='overflow-x-clip'>
       {/* Connect Section */}
-     <div className="Connect md:py-16 py-5 -z-0  md:pt-20 lg:mx-36 md:mx-20 mx-8" data-aos="zoom-in-up">
+     <div className="Connect md:py-16 py-5 -z-0  md:pt-20 lg:mx-36 md:mx-20 mx-8">
         <div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 md:py-8 py-4 px-3 md:px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left'>
         <div className='absolute inset-0 opacity-5 -z-10' 
            style={{backgroundImage : `url("/grain_image.jpg")`}}> 
@@ -20,7 +20,7 @@ const Footer = () => {
          <div className='inline-flex'>
          
        <Link href={"/contact"}>
-       <Button className='bg-gray-900 text-sm flex justify-center items-center gap-3'  borderClassName=' bg-[radial-gradient(var(--white)_40%,transparent_60%)]' containerClassName='hover:bg-white w-36' data-aos="zoom-in" >
+       <Button className='bg-gray-900 text-sm flex justify-center items-center gap-3'  borderClassName=' bg-[radial-gradient(var(--white)_40%,transparent_60%)]' containerClassName='hover:bg-white w-36' >
        <span className=''>Hire Me</span>
        <HiArrowUpRight className='size-4 '/>
        </Button>

@@ -6,7 +6,8 @@ import Services from './services';
 
 const About = () => {
   return (
-    <div className='flex mt-10 justify-center'>
+
+    <div className='flex mt-10 justify-center overflow-hidden'>
      <div className='flex items-center flex-col lg:gap-y-10 gap-y-5 overflow-x-clip '>
      <div className='text-center mb-3 lg:mb-10'>
      <div className='flex justify-center'><h2 className='h font-bold clip-text'>Why Me ?</h2></div>
