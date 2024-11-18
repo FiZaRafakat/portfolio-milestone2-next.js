@@ -122,11 +122,11 @@ const scrollToServices = () => {
 
   return (
 <div className='flex flex-col '>
-        <div className='flex-col sm:flex-row flex justify-center mb-8'>
+        <div className='flex-col sm:flex-row flex justify-center md:mb-20 mb-8'>
           {/* Left Side  */}
-           <div className='left sm:w-1/2 lg:mt-0 min-[800px]:mt-36 mt-24 md:mt-40  flex items-center justify-center lg:h-[40rem] h-auto  '>
+           <div className='left sm:w-1/2  sm:mt-36 mt-24 md:mt-40  flex items-center justify-center h-auto  '>
         <div className='text-center md:leading-relaxed tracking-wide md:space-y-4 space-y-1 px-2'>
-          <h1 className='md:text-5xl  min-[420px]:text-4xl text-2xl animate-fadeIn cursor-default min-w-[10px]'>
+          <h1 className='lg:text-5xl sm:text-4xl min-[420px]:text-3xl text-2xl animate-fadeIn cursor-default min-w-[10px]'>
          { <AnimatedLetters letterClass={letterClass}
           strArray={HiArray}
           idx={11}
@@ -151,7 +151,7 @@ const scrollToServices = () => {
             /> }
             </h2>
             {/* Description */}
-          <h2 className=' leading-relaxed tracking-widest  md:text-sm text-xs px-3 text-white/70  animate-fadeIn2 font-aclonica'>
+          <h2 className=' leading-relaxed tracking-widest lg:text-base  md:text-sm text-xs px-3 text-white/70  animate-fadeIn2 font-aclonica'>
           Offering tailored web solutions to bring your vision to life with seamless functionality and engaging design. Explore a portfolio crafted to elevate your digital presence.</h2>
           </div>
           {/* Buttons */}
@@ -166,31 +166,31 @@ const scrollToServices = () => {
         </div>
       </div>
       {/* Right Side Pic  */}
-         <div className='right overflow-x-clip sm:w-1/2  md:flex lg:items-start min-[370px]:ml-14 ml-10 sm:ml-0 items-center md:mt-28 lg:mt-14  bottom-0 top-auto left-0 right-auto   lg:pr-10'  >  
+         <div className='right overflow-x-clip sm:w-1/2  md:flex lg:items-start min-[370px]:ml-14 ml-10 sm:ml-0 items-center sm:mt-28 lg:mt-18  bottom-0 top-auto left-0 right-auto   lg:pr-20 min-[500px]:ml-32'  >  
         <div className='image lg:h-[200px]  relative'>
-         <img src={"/girl_pic.png"}  alt='Girl Image' className='lg:w-[400px] md:w-[290px] w-[180px]'/>
+         <img src={"/girl_pic.png"}  alt='Girl Image' className='lg:w-[320px] md:w-[290px] min-[500px]:w-[210px] w-[180px]'/>
          {/* Circle Div */}
-         <div className="portrait border-2 border-white/15 absolute top-[15%] left-[15%] lg:top-[55%] lg:left-[33%] md:top-[25%] md:left-[35%] lg:w-[370px] lg:h-[370px] h-[200px] w-[200px]  rounded-full md:w-[250px] md:h-[250px] 
-         after:content-[''] after:absolute after:border-2 lg:after:w-[470px] lg:after:h-[470px] after:top-1/2 after:left-1/2 after:translate-x-[-50%] after:translate-y-[-50%]  after:border-white/15 after:rounded-full md:after:block after:hidden md:after:h-[320px] md:after:w-[320px]
-          before:content-[''] before:absolute before:border-2 before:border-white/15 lg:before:w-[270px] lg:before:h-[270px] before:top-1/2 before:left-1/2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-full md:before:block before:hidden -z-10 md:before:w-[180px] md:before:h-[180px] 
+         <div className="portrait border-2 border-white/15 absolute top-[15%] left-[15%] lg:top-[45%] lg:left-[33%] md:top-[25%] md:left-[35%] lg:w-[290px] lg:h-[290px] h-[200px] w-[200px]  rounded-full md:w-[250px] md:h-[250px] min-[500px]:w-[230px] min-[500px]:h-[230px]
+         after:content-[''] after:absolute after:border-2 lg:after:w-[370px] lg:after:h-[370px] after:top-1/2 after:left-1/2 after:translate-x-[-50%] after:translate-y-[-50%]  after:border-white/15 after:rounded-full md:after:block after:hidden md:after:h-[320px] md:after:w-[320px]
+          before:content-[''] before:absolute before:border-2 before:border-white/15 lg:before:w-[200px] lg:before:h-[200px] before:top-1/2 before:left-1/2 before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-full md:before:block before:hidden -z-10 md:before:w-[180px] md:before:h-[180px] 
          " ></div>
          {/* Icons */}
           <div className='social-icons -mb-[20px] absoulte'>
-            <Link href="https://www.linkedin.com/in/fiza-rafakat-9b6728275/" target='_blank' className='absolute lg:top-[100px]  md:top-[80px] lg:left-[340px] md:left-[250px]  top-[30px] left-[160px] '>
-            <BiLogoLinkedin className='hover:bg-white hover:text-emerald-300 hover:animate-spin icon' data-aos="fade-left"/>
+            <Link href="https://www.linkedin.com/in/fiza-rafakat-9b6728275/" target='_blank' className='absolute lg:top-[80px]  md:top-[80px] lg:left-[285px] md:left-[250px]  top-[30px] left-[160px] min-[500px]:left-[180px] transition-all duration-75 ease-linear'>
+            <BiLogoLinkedin className='hover:bg-white hover:text-emerald-300 hover:animate-spin icon'/>
             </Link>
-            <Link href='https://github.com/FiZaRafakat' target='_blank' className='absolute lg:top-[240px] min-[420px]:left-[230px]  md:top-[190px] lg:left-[470px] md:left-[325px]  top-[100px] left-[220px]'>
-            <FiGithub className=' hover:bg-white hover:text-emerald-300 hover:animate-spin icon' data-aos="fade-left"/>
+            <Link href='https://github.com/FiZaRafakat' target='_blank' className='absolute lg:top-[190px] min-[450px]:left-[240px]  md:top-[190px] lg:left-[370px] md:left-[325px] sm:left-[260px] sm:top-[125px] top-[100px] left-[220px] min-[500px]:left-[275px] min-[500px]:top-[120px] min-[400px]:left-[235px] '>
+            <FiGithub className=' hover:bg-white hover:text-emerald-300 hover:animate-spin icon' />
             </Link>
-            <Link href='https://www.facebook.com/share/o7QNDcVAchkiiKTb/' className='absolute lg:top-[410px]  md:top-[290px] lg:left-[400px] md:left-[285px]  top-[190px] left-[190px]'>
-            <TiSocialFacebook  className='hover:animate-spin icon 'data-aos="fade-left"/>
+            <Link href='https://www.facebook.com/share/o7QNDcVAchkiiKTb/' className='absolute lg:top-[310px]   md:top-[290px] lg:left-[320px] md:left-[285px]  top-[190px] left-[190px] min-[500px]:left-[230px] min-[500px]:top-[230px] min-[400px]:left-[190px] min-[400px]:top-[200px] sm:left-[210px] '>
+            <TiSocialFacebook  className='hover:animate-spin icon '/>
             </Link>
          </div>
        </div>
      </div>
    </div>
    {/* Counter animation */}
-   <div ref={counterRef} className='flex md:flex-row flex-col md:gap-14 gap-5 justify-center md:mb-10 ' data-aos="fade-up">
+   <div ref={counterRef} className='flex sm:flex-row flex-col md:gap-14 gap-5 justify-center md:mb-12 ' data-aos="fade-up">
      <div className='flex justify-center flex-col items-center md:gap-3 gap-1 '>
       <p className='lg:text-5xl text-3xl'> {projectsCompleted} <sub className='text-emerald-300'>+</sub></p>
        <span className='text-white/70  lg:text-lg md:text-base text-xs tracking-widest md:tracking-wider'>Projects Completed</span>

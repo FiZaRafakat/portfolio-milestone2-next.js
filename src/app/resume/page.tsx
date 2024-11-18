@@ -192,7 +192,7 @@ function Page() {
      <div className='flex justify-center items-center' >
      <div className='text-center '>
        <h1 className='h lg:text-4xl md:text-3xl text-xl pb-2'>A Glimpse into my World</h1>
-       <p className="p leading-normal px-3 md:w-[40rem] max-[640px]:w-[27rem] sm:w-[30rem] max-[360px]:w-[20rem]">
+       <p className="p leading-normal px-6 md:w-[40rem] max-[640px]:w-[25rem] sm:w-[30rem] max-[370px]:w-[20rem]">
          Welcome to a deeper look at my world—where passion, creativity, and dedication come together to shape who I am and what I do. From my background and skills to the values that drive me forward, discover the elements that fuel my journey and inspire my work. Let&apos;s explore what motivates me and how I can contribute to your vision.
        </p>
 
@@ -314,7 +314,7 @@ function Page() {
           </div>
       </div>
         {/* Eduacation Div */}
-     <div className='education lg:mt-20 mt-10 lg:mb-20 mb-10 lg:mx-32 md:mx-40 min-[425px]:mx-20'>
+     <div className='education lg:mt-20 mt-10 lg:mb-20 mb-10 lg:mx-32 md:mx-40 min-[425px]:mx-20 min-[320px]:mx-10'>
     <div className="flex flex-col justify-center items-center">
     <div className='flex justify-center items-center gap-2'>
           <MdOutlineStarRate className='md:size-10 size-7 text-emerald-300 '/> 

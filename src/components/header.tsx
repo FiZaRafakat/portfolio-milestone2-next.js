@@ -19,7 +19,7 @@ const Header = () => {
     <div className='flex lg:pt-3 sm:py-3 py-2 sm:gap-2 gap-1 items-center lg:justify-between justify-center px-10 flex-col lg:flex-row lg:gap-10 lg:px-32 '>
       {/* Logo */}
       <div>
-        <h2 className='font-serif text-2xl sm:text-4xl font-bold lg:text-5xl text-white'>&lt; <span className='clip-text cursor-pointer'>F!Za</span> / &gt;</h2>
+        <h2 className='font-serif text-2xl sm:text-4xl font-bold lg:text-5xl text-white'>&lt; <Link href="/"><span className='clip-text cursor-pointer'>F!Za</span></Link> / &gt;</h2>
       </div>
       {/* Navbar */}
       <div>

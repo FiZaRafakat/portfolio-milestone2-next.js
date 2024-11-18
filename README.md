@@ -25,6 +25,8 @@ Welcome to my personal portfolio project! This is a showcase of my skills, and p
 
 ## 🔗 **Live Preview**
 
-Check out my live portfolio here: [Portfolio Link]()
+Check out my live portfolio here: [Portfolio Link](portfolio-milestone2-seven.vercel.app/)
 
 ---
+
+
