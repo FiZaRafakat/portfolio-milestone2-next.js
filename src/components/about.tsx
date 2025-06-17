@@ -1,6 +1,5 @@
 import { Button } from './ui/moving-border';
 import Link from 'next/link';
-import Services from './skills';
 import { Fragment } from 'react';
 import { FaTools } from "react-icons/fa";
 import { SiOpenai } from "react-icons/si";
