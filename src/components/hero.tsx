@@ -168,7 +168,7 @@ const scrollToServices = () => {
       {/* Right Side Pic  */}
          <div className='right overflow-x-clip sm:w-1/2 mt-10 mb-10  md:flex lg:items-start min-[370px]:ml-14 ml-10 sm:ml-0 items-center sm:mt-28 lg:mt-18  bottom-0 top-auto left-0 right-auto   lg:pr-20 min-[500px]:ml-32 xl:pl-40'  >  
         <div className='image lg:h-[200px] xl:h-[300px] relative'>
-         <img src={"/girl_pic.png"}  alt='Girl Image' className='lg:w-[320px] xl:w-[370px] md:w-[290px]  min-[500px]:w-[210px] w-[200px]'/>
+         <img src={"/girl_pic.png"}  alt='Girl Image' className='lg:w-[320px] xl:w-[370px] md:w-[290px]  min-[500px]:w-[210px] w-[200px] z-20'/>
          {/* Circle Div */}
          <div className="portrait border-2 border-white/15 absolute top-[20%] left-[25%] lg:top-[45%] lg:left-[33%] md:top-[25%] md:left-[35%] lg:w-[290px] lg:h-[290px] h-[200px] w-[200px]  rounded-full md:w-[250px] md:h-[250px] min-[500px]:w-[230px] min-[500px]:h-[230px]
          after:content-[''] after:absolute after:border-2 lg:after:w-[370px] lg:after:h-[370px] after:top-1/2 after:left-1/2 after:translate-x-[-50%] after:translate-y-[-50%]  after:border-white/15 after:rounded-full md:after:block after:hidden md:after:h-[320px] md:after:w-[320px]
