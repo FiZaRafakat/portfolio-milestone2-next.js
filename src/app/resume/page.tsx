@@ -44,7 +44,7 @@ const About = [
     Ans : "Pakistani"
   },{
     title : "Experience :",
-    Ans : "3 Months"
+    Ans : "1 year"
   },{
     title : "Freelance :",
     Ans : "Available"
@@ -142,28 +142,28 @@ const Education :EducationEntry[] = [
   {
     title : "GenAI , Metaverse & Web3.0",
     date : "2024-Present",
-    field : "Quarter-2",
+    field : "Quarter-3",
     institute : "Governor House",
-    description :"Currently enrolled in an advanced IT course hosted at the Governor House. Thus far, I’ve focused on web development using the latest version of Next.js and various modern tools. Upcoming modules will delve into AI agents and advanced Python technologies, providing a comprehensive foundation in cutting-edge tech applications."
+    description :"Learning Agentic AI with OpenAI’s SDK after completing advanced Python and modern web development using Next.js in a Governor House IT program. This program focuses on cutting-edge technologies like AI, Metaverse, and Web3.0, equipping me with the skills to innovate in these fields."
   },{
     title : "Chartered Accountancy",
     date : "2022-Present",
     field : "FTS 41",
     level : "CAF / CA-Inter",
     institute : "ICAP",
-    description : "Currently pursuing Chartered Accountancy (CA) with a solid foundation in the field, having successfully completed PRC and CAF Group A exams. I am actively engaged in advancing my expertise by studying remaining modules, aiming to deepen my knowledge and skills in accounting, finance, and related disciplines."
+    description : "Currently pursuing Chartered Accountancy (CA) with PRC and CAF Group A cleared. Actively working on remaining modules to strengthen my expertise in accounting, finance, and related fields.."
   },{
     title : "Intermediate",
     date : "2020-2022",
     field : "FSC Pre-Engineering",
     institute : "Govt-degree XYZ college",
-    description : "Completed F.Sc. in Pre-Engineering with a strong focus on Mathematics, my favorite subject and a major influence in choosing a math-related career path. Graduated with an A grade, further motivating my pursuit of fields grounded in analytical and quantitative skills."
+    description : "Completed F.Sc. Pre-Engineering with an A grade, driven by a strong interest in Mathematics—my favorite subject and a key influence in pursuing an analytical, math-focused career path."
   },{
     title : "Matric",
     date : "2018-2022",
     field : "Science",
     institute : "ABC School",
-    description : "Completed Matriculation in the Science field, securing an A1 grade. This strong academic foundation helped develop critical thinking and problem-solving skills, which supported my further studies in Chartered Accountancy (CA) and IT."
+    description : "Completed Matriculation in Science with an A1 grade, building a strong foundation in critical thinking and problem-solving that supports my journey in CA and IT."
   }
 ]
 
@@ -191,9 +191,9 @@ function Page() {
         {/* Heading Div */}
      <div className='flex justify-center items-center' >
      <div className='text-center '>
-       <h1 className='h lg:text-4xl md:text-3xl text-xl pb-2'>A Glimpse into my World</h1>
-       <p className="p leading-normal px-6 md:w-[40rem] max-[640px]:w-[25rem] sm:w-[30rem] max-[370px]:w-[20rem]">
-         Welcome to a deeper look at my world—where passion, creativity, and dedication come together to shape who I am and what I do. From my background and skills to the values that drive me forward, discover the elements that fuel my journey and inspire my work. Let&apos;s explore what motivates me and how I can contribute to your vision.
+       <h1 className='h lg:text-4xl md:text-3xl xl:text-5xl text-[21px] pb-2'>A Glimpse into my World</h1>
+       <p className="p text-sm leading-normal xl:w-[50rem] xl:text-lg px-6 md:w-[40rem] max-[640px]:w-[25rem] sm:w-[30rem] max-[370px]:w-[20rem]">
+        Step into my world where passion, creativity, and dedication drive everything I do. From my background and skills to the values that guide me, discover what inspires my work and how I can contribute to your vision.
        </p>
 
        </div>
@@ -201,15 +201,15 @@ function Page() {
         {/* Personal Info Div */}
      <div className='pt-3 flex lg:gap-10 gap-2 md:gap-4 lg:pb-10 md:pb-4 pb-2 flex-col md:flex-row  md:mx-40' >
      <Card className='mt-8 lg:w-[40rem] sm:w-[23rem] min-[500px]:w-[470px] w-[300px] mx-auto  py-5 text-center' data-aos="fade-right">
-         <div className='flex justify-center items-center gap-2'>
+         <div className='flex justify-center items-center gap-2 lg:mb-3'>
           <MdOutlineStarRate className='lg:size-10 md:size-8 size-7  text-emerald-300 '/> 
-          <h1 className='lg:text-2xl md:text-xl text-lg '>Personal Info</h1>
+          <h1 className='lg:text-2xl md:text-xl text-lg xl:text-3xl'>Personal Info</h1>
           </div>
            { About.map((about)=>(
             <div key={about.title} className=''>
               <div className='flex justify-between px-4 md:px-8 py-1 '>
-              <h3 className='text-white/70 md:text-base text-sm'>{about.title}</h3>
-              <p className='text-white md:text-base text-sm'>{about.Ans}</p>
+              <h3 className='text-white/70 xl:text-xl md:text-base text-sm'>{about.title}</h3>
+              <p className='text-white md:text-base xl:text-xl text-sm'>{about.Ans}</p>
               </div>
             </div>
            ))}
@@ -219,7 +219,7 @@ function Page() {
       data-aos="fade-left">
       <div className='flex justify-center items-center gap-2'>
           <MdOutlineStarRate className='md:size-10 size-7 text-emerald-300 '/> 
-          <h1 className='text-2xl '>My Skills</h1>
+          <h1 className='lg:text-2xl md:text-xl text-lg xl:text-3xl '>My Skills</h1>
           </div>
 
      <div className='mx-14 mt-5'>
@@ -234,7 +234,7 @@ function Page() {
           <span className="circle">75%</span>
         </div>
       </div>
-      <p className="text-xs tracking-wider">Communication</p>
+      <p className="text-xs md:text-sm  tracking-wider">Communication</p>
     </div>
     <div className="flex items-center flex-col justify-center md:gap-3 gap-2">
       <div
@@ -245,7 +245,7 @@ function Page() {
           <span className="circle">80%</span>
         </div>
       </div>
-      <p className="text-xs tracking-wider">Creativity</p>
+      <p className="text-xs md:text-sm tracking-wider">Creativity</p>
     </div>
   </div>
 
@@ -259,7 +259,7 @@ function Page() {
           <span className="circle">95%</span>
         </div>
       </div>
-      <p className="text-xs tracking-wider">Responsibility</p>
+      <p className="text-xs md:text-sm  tracking-wider">Responsibility</p>
     </div>
     <div className="flex items-center flex-col justify-center md:gap-3 gap-2">
       <div
@@ -270,7 +270,7 @@ function Page() {
           <span className="circle">79%</span>
         </div>
       </div>
-      <p className="text-xs tracking-wider">Problem Solving</p>
+      <p className="text-xs md:text-sm  tracking-wider">Problem Solving</p>
     </div>
   </div>
 </div>
@@ -283,7 +283,7 @@ function Page() {
          <Card className='lg:w-[40rem] sm:w-[23rem] min-[500px]:w-[470px]  w-[300px] mx-auto py-5 text-center' data-aos="fade-right" >
          <div className='flex justify-center items-center gap-2'>
           <MdOutlineStarRate className='md:size-10 size-7 text-emerald-300 '/> 
-          <h1 className='text-2xl '>My Toolbox</h1>
+          <h1 className='lg:text-2xl md:text-xl text-lg xl:text-3xl'>My Toolbox</h1>
           </div>
            <div className='md:pt-6 pt-3 '>
           <Toolbox items={toolBoxItem} itemsWrapperClassName='animate-moveLeft [animation-duration:30s]' />
@@ -296,7 +296,7 @@ function Page() {
            data-aos="fade-left">     
           <div className='flex justify-center items-center gap-2'>
           <MdOutlineStarRate className='size-10  text-emerald-300 '/> 
-          <h1 className='text-2xl'>Beyond the Code</h1>
+          <h1 className='lg:text-2xl md:text-xl text-lg xl:text-2.5xl'>Beyond the Code</h1>
           </div >
            <div className='pt-5 relative'>
               {  hobbies.map((hobby)=>(
@@ -318,9 +318,9 @@ function Page() {
     <div className="flex flex-col justify-center items-center">
     <div className='flex justify-center items-center gap-2'>
           <MdOutlineStarRate className='md:size-10 size-7 text-emerald-300 '/> 
-          <h1 className='md:text-3xl text-2xl '>Education History</h1>
+          <h1 className='md:text-3xl xl:text-5xl text-2xl '>Education History</h1>
           </div>
-          <p className="text-center p px-3 md:w-[40rem] max-[360px]:w-[20rem] mb-5 md:mb-8">
+          <p className="text-center text-sm xl:text-lg p px-3 xl:w-[50rem] md:w-[40rem] max-[360px]:w-[20rem] mt-3 mb-5 md:mb-8">
   My educational journey reflects my commitment to growth and learning, equipping me with the knowledge and skills necessary to excel in my field. Below is a timeline of the institutions and milestones that have shaped my academic path.
 </p>
     </div>

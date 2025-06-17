@@ -19,7 +19,7 @@ const Tape = () => {
 
   return (
     <div className=' select-none'>
-       <div className='bg-gradient-to-r from-emerald-300 to-sky-400 overflow-x-clip -rotate-3 -mx-2'>
+       <div className='bg-gradient-to-r from-emerald-300 to-sky-400  overflow-x-clip -rotate-3 -mx-2'>
       <div className='flex mask'>
       <div className='flex flex-none gap-12 py-2 px-3' >
        {words.map(word =>(

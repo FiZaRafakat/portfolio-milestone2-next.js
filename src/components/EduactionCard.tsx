@@ -34,16 +34,16 @@ const EducationCard: React.FC<EducationCardProps> = ({ education, index }) =>{
 <div className="content p-2 ">
   
      <div className="flex justify-center ">
-     <h2 className='md:text-xl text-lg text-center clip-text uppercase  mb-2'>{education.title}</h2>
+     <h2 className='md:text-2xl text-xl xl:text-3xl text-center clip-text uppercase  mb-2'>{education.title}</h2>
      </div>
-          <h3 className="md:text-lg text-base italic">{education.institute}</h3>
+          <h3 className="md:text-lg text-base xl:text-xl italic">{education.institute}</h3>
           
          <div className="py-1 flex gap-3">
-          <span className="text-emerald-300 md:text-base text-xs">{education.field}</span>
-           <span className="text-emerald-300 md:text-base text-xs">{education.level}</span>
+          <span className="text-emerald-300 md:text-base xl:text-lg text-sm">{education.field}</span>
+           <span className="text-emerald-300 md:text-base xl:text-lg text-sm">{education.level}</span>
           </div>
-          <p className="text-white/60 md:text-sm text-[0.6rem] font-thin tracking-widest md:tracking-wider leading-relaxed mb-3">{education.description}</p>
-          <span className=" bg-white/10 py-1 px-3 rounded-xl text-white md:text-base text-xs" >{education.date}</span>
+          <p className="text-white/60 md:text-sm xl:text-base text-xs font-thin tracking-widest md:tracking-wider leading-relaxed mb-3">{education.description}</p>
+          <span className=" bg-white/10 py-1 px-3 rounded-xl text-white md:text-base xl:text-lg text-xs" >{education.date}</span>
 </div>
 
   </div>
