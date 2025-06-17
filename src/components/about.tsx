@@ -8,6 +8,23 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineBubbleChart } from "react-icons/md";
 import { MdOutlineForum } from "react-icons/md";
 import SkillsSection from './skills';
+import {motion} from 'framer-motion';
+
+const badges =[
+   {
+    title : "Design-Lover",
+    emoji : '🎨',
+  },{
+    title : "AI Curious",
+    emoji : '🧠',
+  },{
+    title: "Performance-Focused",
+    emoji : '⚡',
+  },{
+    title : "UX Obsessed",
+    emoji : '💬',
+  }
+]
 
 const About = () => {
   return (
@@ -26,8 +43,8 @@ const About = () => {
   {/* <div className='absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[30%] bg-emerald-500 opacity-10 blur-3xl rounded-full z-0'></div> */}
 
   <div className='relative z-10 grid grid-cols-1 md:grid-cols-2 gap-20 items-start'>
-    <div className='space-y-6'>
-      <p className='mt-3 xl:mt-20 text-gray-300 max-w-3xl mx-auto px-3 xl:text-2xl text-base leading-relaxed'>
+    <div className='space-y-6 flex items-center flex-col'>
+      {/* <p className='mt-3 xl:mt-20 text-gray-300 max-w-3xl mx-auto px-3 xl:text-2xl text-base leading-relaxed'>
     I’m not just writing code — I’m crafting immersive digital experiences that feel effortless, intuitive, and bold.  
     With strong expertise in <span className='text-emerald-300 font-semibold'>HTML, CSS, JavaScript, TypeScript, Tailwind, and Next.js</span>, I specialize in building responsive UIs that not only perform, but impress.
     <br className='block  mt-5' />
@@ -35,10 +52,30 @@ const About = () => {
     <br className='block' />
     Every project I take on blends thoughtful design, clean logic, and modern tools.  
     If you’re looking for someone who cares about the little details and the big picture — you’ve found your dev.
-  </p>
+  </p> */}
+<div className='mt-3 xl:mt-28 text-gray-300 max-w-3xl mx-auto px-3 xl:text-2xl text-base leading-relaxed'>
+ <p> I don’t just code, I design experiences that feel intuitive and look stunning.  </p>
+  <p className='mt-6'>With a blend of development and design expertise, I bring UI to life using motion, micro-interactions, and user psychology.  </p>
+  <p className='mt-6'>From concept to deployment, I care about every pixel, every transition, and every user click.</p>
+</div>
+
+<div className="flex flex-wrap gap-3 max-w-xl py-3 mx-auto mt-4">
+  {badges.map((badge, index) => (
+    <motion.div key={index} className='md:px-6 px-3 inline-flex bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 rounded-full py-1.5 items-center' drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragElastic={0.2} dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-center"
+                 >
+                      <span className='text-gray-950 text-base'>{badge.title}</span>
+                      <span className=''>{badge.emoji}</span>
+                     
+</motion.div>
+  ))}
+</div>
+
+
+
+
 
       <Link href="/resume" className='flex justify-center'>
-        <Button className='bg-gray-900' containerClassName='w-40 xl:w-44  md:text-xl mt-2 md:mt-4' borderRadius='1.5rem' data-aos="zoom-in">
+        <Button className='bg-gray-900' containerClassName='w-40 xl:w-44 xl:mt-10  md:text-xl mt-2 md:mt-4' borderRadius='1.5rem' data-aos="zoom-in">
           More About Me
         </Button>
       </Link>

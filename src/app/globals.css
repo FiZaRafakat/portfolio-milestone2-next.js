@@ -96,6 +96,10 @@ body {
   .mask{
     @apply [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]
   }
+  .badge {
+  @apply text-xs sm:text-sm px-4 py-2 rounded-full bg-gradient-to-r from-emerald-800/20 to-emerald-500/10 text-emerald-300 border border-emerald-400/20 backdrop-blur-sm shadow-inner shadow-emerald-500/10 hover:scale-105 transition-transform duration-300;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
