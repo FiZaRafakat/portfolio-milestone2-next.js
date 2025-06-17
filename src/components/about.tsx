@@ -61,8 +61,8 @@ const About = () => {
 
 <div className="flex flex-wrap gap-3 max-w-xl py-3 mx-auto mt-4">
   {badges.map((badge, index) => (
-    <motion.div key={index} className='md:px-6 px-3 inline-flex bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 rounded-full py-1.5 items-center' drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragElastic={0.2} dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-center"
-                 >
+    <motion.div key={index} className='md:px-6 px-3 inline-flex bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 rounded-full py-1.5 items-center' drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragElastic={0.2} dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeInOut" }}>
+                
                       <span className='text-gray-950 text-base'>{badge.title}</span>
                       <span className=''>{badge.emoji}</span>
                      
