@@ -1,53 +1,3 @@
-// import { useRef, useLayoutEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { useGSAP } from "@gsap/react";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const Line = () => {
-//   const wrapperRef = useRef(null);
-//   const textRef = useRef(null);
-
-//   useGSAP(() => {
-//     const wrapperWidth = wrapperRef.current.offsetWidth;
-//     const textWidth = textRef.current.scrollWidth;
-
-//     const moveDistance = textWidth - wrapperWidth;
-
-//     gsap.fromTo(
-//       textRef.current,
-//       { x: wrapperWidth },
-//       {
-//         x: -moveDistance,
-//         ease: "power1.inOut",
-//         scrollTrigger: {
-//           trigger: wrapperRef.current,
-//           start: "top 40%",
-//           end: `+=${textWidth}`, // scroll based on actual width
-//           scrub: 2,
-//           pin: true,
-//         },
-//       }
-//     );
-//   }, []);
-
-//   return (
-//     <div ref={wrapperRef} className="min-h-[100px] flex items-center relative overflow-hidden">
-//       <p
-//         ref={textRef}
-//         className="text-[10vw] text-white font-extrabold whitespace-nowrap"
-//       >
-//         I didn’t just learn <span className="clip-text inline-block">animations</span> to impress, I learned them to make people smile while they scroll.
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default Line;
-
-
-
 "use client";
 import {motion} from "framer-motion"; 
 import { useRef, } from "react";
@@ -85,13 +35,6 @@ const badges =[
     left : '50%',
     rotate : -10,
   },
-  //{
-  //   title : "Smart UI Decisions",
-  //   emoji : '🧠',
-  //   top : '20%',
-  //   left : '12%',
-  // },
-
   {
     title : "Built for Business Needs",
     emoji : '💼',
@@ -147,12 +90,6 @@ const badges =[
     left: "36%",
     rotate: -5,
   },
-  // {
-  //   title: "Built for Speed ⚡",
-  //   top: "15%",
-  //   left: "60%",
-  //   rotate: 10,
-  // },
   {
     title: "Wow at First Scroll 🌈",
     top: "80%",
@@ -175,12 +112,9 @@ const badges =[
   }
 ]
 
-
-
 const Line = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  // const [showSmile, setShowSmile] = useState(false);
 
   useGSAP(() => {
     if (!wrapperRef.current || !textRef.current) return;
@@ -194,17 +128,14 @@ const Line = () => {
       { x: wrapperWidth },
       {
         x: -moveDistance,
-        ease: "power1.inOut",
+        // ease: "power1.inOut",
         scrollTrigger: {
           trigger: wrapperRef.current,
-          start: "top 40%",
+          start: "top 30%",
+          markers : true , 
           end: `+=${textWidth}`,
           scrub: 2,
           pin: true,
-          // onUpdate: (self) => {
-          //   const progress = self.progress;
-          //   setShowSmile(progress > 0.5);
-          // },
         },
       }
     );
@@ -216,15 +147,8 @@ const Line = () => {
       className="md:min-h-[300px] relative overflow-x-hidden flex items-center" >
          <div ref={textRef} className="relative min-w-max">
         <p className="md:text-[10vw] text-[10vh] text-white font-extrabold whitespace-nowrap relative z-10">
-          I didn’t just learn{" "}
-          <span className=" inline-block">animations</span> to impress,
-          I learned them to make people{" "}
-          {/* {showSmile && (
-            <span className="inline-block animate-bounce text-yellow-300">
-              😊
-            </span>
-          )}{" "} */}
-          smile while they scroll.
+          I learned animations — not just to impress,  
+          but to make people smile while they scroll.
         </p>
 
         {/* Absolute Badges inside scrolling textRef */}

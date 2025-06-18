@@ -301,6 +301,8 @@ function Page() {
            <div className='pt-5 relative'>
               {  hobbies.map((hobby)=>(
                   <motion.div key={hobby.title} className='md:px-6 px-3 inline-flex bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 rounded-full py-1.5 items-center absolute' drag   style={{left : hobby.left ,top : hobby.top }}
+                  dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragElastic={0.2} dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }} initial={{ opacity: 0, y: -20 }}  animate={{ opacity: 1, y: 0, }} transition={{ duration: 0.5, ease: "easeInOut" }} whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
                  >
                       <span className='text-gray-950 text-sm'>{hobby.title}</span>
                       <span>{hobby.emoji}</span>
