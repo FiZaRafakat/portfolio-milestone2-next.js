@@ -7,8 +7,7 @@ import { FaCreditCard } from "react-icons/fa";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineBubbleChart } from "react-icons/md";
 import { MdOutlineForum } from "react-icons/md";
-// import SkillsSection from './skills';
-import Line from './skills';
+import Line from './line';
 import {motion} from 'framer-motion';
 
 const badges =[

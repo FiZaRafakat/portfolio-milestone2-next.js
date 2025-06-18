@@ -17,20 +17,20 @@ function Hero() {
 
   const [projectsCompleted, setProjectsCompleted] = useState(0);
   const [dailyLearningHours, setDailyLearningHours] = useState(0);
-  const [typescriptScore, setTypescriptScore] = useState(0);
+  const [Experience, setExperience] = useState(0);
 
  //countdown function 
   const countUp = () => {
     const targets = {
       projectsCompleted: 20,
       dailyLearningHours: 8,
-      typescriptScore: 100,
+      Experience: 1,
     };
 
     const counts = {
       projectsCompleted: 0,
       dailyLearningHours: 0,
-      typescriptScore: 0,
+      Experience: 0,
     };
 
     const duration = 3; 
@@ -49,13 +49,13 @@ function Hero() {
           targets.dailyLearningHours,
           (targets.dailyLearningHours * frame) / totalFrames
         );
-        counts.typescriptScore = Math.min(
-          targets.typescriptScore,
-          (targets.typescriptScore * frame) / totalFrames
+        counts.Experience = Math.min(
+          targets.Experience,
+          (targets.Experience * frame) / totalFrames
         );
         setProjectsCompleted(Math.round(counts.projectsCompleted));
         setDailyLearningHours(Math.round(counts.dailyLearningHours));
-        setTypescriptScore(Math.round(counts.typescriptScore));
+        setExperience(Math.round(counts.Experience));
 
         frame++;
 
@@ -200,8 +200,8 @@ const scrollToServices = () => {
        <span className='text-white/70 xl:text-2xl lg:text-lg md:text-base text-sm tracking-widest md:tracking-wider'>Daily Learning Hours</span>
       </div>
       <div className='flex justify-center flex-col items-center md:gap-3 gap-1 '>
-      <p  className='lg:text-6xl xl:text-8xl text-4xl'> {typescriptScore} <sub className='text-emerald-300'>%</sub></p>
-       <span className='text-white/70 xl:text-2xl  lg:text-lg md:text-base text-sm tracking-widest md:tracking-wider' >Typescript Q1 score</span>
+      <p  className='lg:text-6xl xl:text-8xl text-4xl'> {Experience} <sub className='text-emerald-300'>+</sub></p>
+       <span className='text-white/70 xl:text-2xl  lg:text-lg md:text-base text-sm tracking-widest md:tracking-wider' >Experience</span>
       </div>
    </div>
 </div>
