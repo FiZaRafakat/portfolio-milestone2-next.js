@@ -50,7 +50,7 @@
 
 "use client";
 import {motion} from "framer-motion"; 
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -178,11 +178,13 @@ const badges =[
 
 
 const Line = () => {
-  const wrapperRef = useRef(null);
-  const textRef = useRef(null);
-  const [showSmile, setShowSmile] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  // const [showSmile, setShowSmile] = useState(false);
 
   useGSAP(() => {
+    if (!wrapperRef.current || !textRef.current) return;
+
     const wrapperWidth = wrapperRef.current.offsetWidth;
     const textWidth = textRef.current.scrollWidth;
     const moveDistance = textWidth - wrapperWidth;
@@ -199,10 +201,10 @@ const Line = () => {
           end: `+=${textWidth}`,
           scrub: 2,
           pin: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            setShowSmile(progress > 0.5);
-          },
+          // onUpdate: (self) => {
+          //   const progress = self.progress;
+          //   setShowSmile(progress > 0.5);
+          // },
         },
       }
     );
@@ -211,9 +213,9 @@ const Line = () => {
   return (
     <div
       ref={wrapperRef}
-      className="min-h-[300px] relative overflow-x-hidden flex items-center" >
+      className="md:min-h-[300px] relative overflow-x-hidden flex items-center" >
          <div ref={textRef} className="relative min-w-max">
-        <p className="text-[10vw] text-white font-extrabold whitespace-nowrap relative z-10">
+        <p className="md:text-[10vw] text-[10vh] text-white font-extrabold whitespace-nowrap relative z-10">
           I didn’t just learn{" "}
           <span className=" inline-block">animations</span> to impress,
           I learned them to make people{" "}
