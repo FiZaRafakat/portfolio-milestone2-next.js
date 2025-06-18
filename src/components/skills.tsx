@@ -121,15 +121,13 @@ const Line = () => {
       lineRef.current,
       { x: "100%" }, // start from right
       {
-        x: "-250%",  // move to far left
+        x: "-545%",  // move to far left
         scrollTrigger: {
           trigger: lineRef.current,
-          start: "top 30%",   // when top of element hits bottom of viewport
-          end: "top -500%",     // until bottom of element hits top of viewport
-          scrub: 7,
+          start: "top 40%",   // when top of element hits bottom of viewport
+          end: "top -800%",     // until bottom of element hits top of viewport
+          scrub: 2,
           pin: true,
-          markers: true,         // for debugging
-          scroller: "body",      // optional (body is default)
         },
       }
     );
@@ -139,7 +137,7 @@ const Line = () => {
     <div ref={lineRef} className="min-h-[100px] flex items-center relative">
        
       <p
-        className="text-[5vw] text-white font-extrabold whitespace-nowrap"
+        className="text-[10vw] text-white font-extrabold whitespace-nowrap"
       >
         I didn’t just learn animations to impress, I learned them to make people smile while they scroll.
       </p>
