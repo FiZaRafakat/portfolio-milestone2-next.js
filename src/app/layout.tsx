@@ -35,8 +35,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Fiza's Portfolio",
-  description: "Created by Fiza Rafakat",
+  title: "Fiza Rafakat / Portfolio", 
+  description: "Creative Frontend Developer portfolio. Built with React and Tailwind CSS.",
 };
 
 export default function RootLayout({

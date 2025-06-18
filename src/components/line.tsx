@@ -146,7 +146,7 @@ const Line = () => {
       ref={wrapperRef}
       className="md:min-h-[300px] relative overflow-x-hidden flex items-center" >
          <div ref={textRef} className="relative min-w-max">
-        <p className="md:text-[10vw] text-[10vh] text-white font-extrabold whitespace-nowrap relative z-10">
+        <p className="md:text-[10vw] text-[10vh] text-white font-extrabold whitespace-nowrap relative z-10 mask-image">
           I learned animations — not just to impress,  
           but to make people smile while they scroll.
         </p>
