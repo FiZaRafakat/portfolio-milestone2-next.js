@@ -9,44 +9,47 @@ gsap.registerPlugin(ScrollTrigger);
 
 const badges =[
   {
-    title : "Pixel-Perfect Every Time",
-    emoji : '✨',
-    top : '-10%',
-    left : '5%',
+    title: "Wow at First Scroll 🌈",
+    top: "80%",
+    left: "0%",
+    rotate: -7,
+  },
+  {
+    title: "Every Pixel Counts 🔍",
+    top : '0%',
+    left : '11%',
     rotate : -10
   },
   {
-    title : "Lightning-Fast Interfaces",
-    emoji : '⚡',
-    top : '90%',
-    left : '8%',
-    rotate : -10
+    title: "Animation that Speaks 🎬",
+     top : '70%',
+    left : '23%',
+    rotate : -12
+  },
+  {
+    title : "Users Stay. Clients Smile",
+    emoji : "💖",
+    top : '-5%',
+    left : '35%',
+    rotate: -5
+  },
+  {
+    title : "Frontend with Feel",
+    emoji : '🎨',
+    top : '75%',
+    left : '46%',
+    rotate : -10,
   },
   {
     title: "Clean Code. Clean Design.",
     emoji : '💎',
     top : '4%',
-    left : '65%',
-  },
-  {
-    title : "Frontend with Feel",
-    emoji : '🎨',
-    top : '-10%',
-    left : '50%',
-    rotate : -10,
-  },
-  {
-    title : "Built for Business Needs",
-    emoji : '💼',
-    top : '80%',
-    left : '45%',
-    rotate : -12
-  },
-  {
-    title: "Made to Convert 🛒",
+    left : '57%',
+  },{
+    title: "Feels like Magic 🎇",
     top: "80%",
-    left: "88%",
-    rotate: -10,
+    left: "81%",
+    rotate: -15,
   },
   {
     title: "Crafted with UX Love 💖",
@@ -54,64 +57,7 @@ const badges =[
     left: "98%",
     rotate: 12,
   },
-  {
-    title: "Animation that Speaks 🎬",
-     top : '-10%',
-    left : '20%',
-    rotate : -12
-  },
-  {
-    title: "Scroll That Sells 💰",
-    top : '80%',
-    left : '30%',
-    rotate : -15
-  },
-  {
-    title: "Interfaces with Soul 🧿",
-    top: "75%",
-    left: "16%",
-    rotate: -10,
-  },
-  {
-    title: "Designed to Impress 👀",
-    top: "70%",
-    left: "73%",
-    rotate: -8,
-  },
-  {
-    title: "Feels like Magic 🎇",
-    top: "-3%",
-    left: "81%",
-    rotate: -15,
-  },
-  {
-    title: "Every Pixel Counts 🔍",
-    top: "75%",
-    left: "36%",
-    rotate: -5,
-  },
-  {
-    title: "Wow at First Scroll 🌈",
-    top: "80%",
-    left: "0%",
-    rotate: -7,
-  },
-  {
-    title : "Accessible & SEO Ready",
-    emoji : '🌐',
-    top : '80%',
-    left : '58%',
-    rotate : -12
-  },
-  {
-    title : "Users Stay. Clients Smile",
-    emoji : "💖",
-    top : '-5%',
-    left : '39%',
-    rotate: -5
-  }
 ]
-
 const Line = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -128,11 +74,11 @@ const Line = () => {
       { x: wrapperWidth },
       {
         x: -moveDistance,
-        // ease: "power1.inOut",
+        ease: "power2.out",
         scrollTrigger: {
           trigger: wrapperRef.current,
           start: "top 30%",
-          markers : true , 
+          // markers : true , 
           end: `+=${textWidth}`,
           scrub: 2,
           pin: true,
@@ -155,15 +101,19 @@ const Line = () => {
         {badges.map((badge, index) => (
           <motion.div
             key={index}
-            className="absolute bg-gradient-to-r from-emerald-300 to-sky-400 text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg"
+            className="absolute bg-gradient-to-r from-emerald-300 to-sky-400 text-black px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg z-20"
             drag
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} dragElastic={0.2} dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }} initial={{ opacity: 0, y: -20 }}  animate={{ opacity: 1, y: 0, rotate: badge.rotate || 0 }} transition={{ duration: 0.5, ease: "easeInOut" }} whileTap={{ scale: 0.95 }}
-             whileHover={{ scale: 1.05 }}
+            dragElastic={0.2}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0, rotate: badge.rotate || 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
             style={{
               top: badge.top,
               left: badge.left,
-              transform: `translate(-50%, -50%)`,
-              zIndex: 20,
+              transform: "translate(-50%, -50%)",
             }}
           >
             <span>{badge.emoji}</span>
