@@ -62,11 +62,6 @@ whileHover={{ scale: 1.05 }}>
 </motion.div>
   ))}
 </div>
-
-
-
-
-
       <Link href="/resume" className='flex justify-center'>
         <Button className='bg-gray-900' containerClassName='w-40 xl:w-44 xl:mt-10  md:text-xl mt-2 md:mt-4' borderRadius='1.5rem' data-aos="zoom-in">
           More About Me
@@ -74,20 +69,6 @@ whileHover={{ scale: 1.05 }}>
       </Link>
     </div>
 
-    {/* Optional Feature Highlights */}
-    {/* <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
-      {[
-        { title: "Responsive UI", desc: "Layouts that adapt to all devices with seamless flow." },
-        { title: "Clean Animation", desc: "Subtle motion using AOS, GSAP & Framer Motion." },
-        { title: "Modern Stack", desc: "Next.js, Tailwind, TypeScript & Git-based workflows." },
-        { title: "Real-World Projects", desc: "CMS, chatbots, payment systems & more." },
-      ].map((item, i) => (
-        <div key={i} className='bg-[#111] border border-gray-800 rounded-xl p-4 shadow-md hover:shadow-emerald-500/20 transition'>
-          <h4 className='font-semibold text-emerald-300 mb-1'>{item.title}</h4>
-          <p className='text-sm text-gray-400'>{item.desc}</p>
-        </div>
-      ))}
-    </div> */}
     <div className="boxes md:py-10 py-1">
   <div className='flex flex-wrap justify-center items-center gap-5  '>
       <Fragment >
@@ -141,11 +122,13 @@ whileHover={{ scale: 1.05 }}>
    
   </div>
 </div>
-
   </div>
 
-  <div className='mt-0 overflow-x-hidden z-10'>
-   {/* <SkillsSection /> */}
+  <div>
+    
+  </div>
+
+  <div className='mt-0 overflow-x-hidden z-10 md:block hidden'>
    <Line />
   </div>
 </div>

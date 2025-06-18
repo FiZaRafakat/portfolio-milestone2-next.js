@@ -58,9 +58,12 @@ const badges =[
     rotate: 12,
   },
 ]
+
 const Line = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const smileRef = useRef<HTMLSpanElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useGSAP(() => {
     if (!wrapperRef.current || !textRef.current) return;
@@ -77,27 +80,136 @@ const Line = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: wrapperRef.current,
-          start: "top 30%",
-          // markers : true , 
+          start: "top 20%",
           end: `+=${textWidth}`,
           scrub: 2,
           pin: true,
         },
       }
     );
+
+  ScrollTrigger.create({
+  trigger: wrapperRef.current,
+  start: "top 30%",
+  end: `+=${textWidth}`,
+  scrub: true,
+  onUpdate: (self) => {
+    const progress = self.progress;
+
+    const face = svgRef.current?.querySelector("#face");
+    const eyeLeft = svgRef.current?.querySelector("#eyeLeft");
+    const eyeRight = svgRef.current?.querySelector("#eyeRight");
+    const smile = svgRef.current?.querySelector("#smile");
+
+    if (!face || !eyeLeft || !eyeRight || !smile || !svgRef.current) return;
+
+    // Animate IN
+    if (progress > 0.5) {
+      gsap.to(svgRef.current, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.3,
+        ease: "back.out(2)",
+      });
+
+      gsap.to(face, {
+        strokeDashoffset: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+
+      gsap.to([eyeLeft, eyeRight], {
+        opacity: 1,
+        scale: 1.2,
+        duration: 0.4,
+        delay: 0.8,
+        stagger: 0.2,
+        ease: "back.out(3)",
+      });
+
+      gsap.to(smile, {
+        strokeDashoffset: 0,
+        duration: 0.6,
+        delay: 1.2,
+        ease: "power2.out",
+      });
+    }
+
+    // Animate OUT (Reset if scrolling back)
+    else {
+      gsap.to(svgRef.current, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.3,
+      });
+
+      gsap.set(face, { strokeDashoffset: 251 });
+      gsap.set([eyeLeft, eyeRight], { opacity: 0, scale: 1 });
+      gsap.set(smile, { strokeDashoffset: 50 });
+    }
+  },
+});
+
+
+
   }, []);
 
   return (
     <div
       ref={wrapperRef}
-      className="md:min-h-[300px] relative overflow-x-hidden flex items-center" >
-         <div ref={textRef} className="relative min-w-max">
-        <p className="md:text-[10vw] text-[10vh] text-white font-extrabold whitespace-nowrap relative z-10 mask-image">
-          I learned animations — not just to impress,  
-          but to make people smile while they scroll.
+      className="min-h-[450px] relative overflow-x-hidden flex items-center"
+    >
+      <div ref={textRef} className="relative min-w-max">
+        <p className="md:text-[10vw] text-white font-extrabold whitespace-nowrap relative z-10 mask-image">
+          I learned animations — not just to impress, but to make{" "} <span ref={smileRef}>people</span>{" "}
+          <span className="relative z-20 text-emerald-300">
+            smile
+          </span>{" "}
+          while they scroll.
         </p>
 
-        {/* Absolute Badges inside scrolling textRef */}
+        <svg
+  ref={svgRef}
+  width="150"
+  height="150"
+  viewBox="0 0 100 100"
+  className="absolute z-30"
+  style={{ top: "-5%", left: "73%", transform: "translate(-50%, -50%) rotate(-10deg)", opacity: 0 }}
+>
+  {/* Face Circle */}
+  <circle
+    id="face"
+    cx="50"
+    cy="50"
+    r="40"
+    stroke="#38bdf8"
+    strokeWidth="4"
+    fill="transparent"
+    strokeDasharray="251"
+    strokeDashoffset="251"
+  />
+
+  {/* Eyes */}
+  <circle id="eyeLeft" cx="35" cy="40" r="5" fill="#38bdf8" opacity="0" />
+  <circle id="eyeRight" cx="65" cy="40" r="5" fill="#38bdf8" opacity="0" />
+
+  {/* Smile Path */}
+  <path
+    id="smile"
+    d="M35 65 Q50 80 65 65"
+    stroke="#38bdf8"
+    strokeWidth="4"
+    fill="transparent"
+    strokeDasharray="50"
+    strokeDashoffset="50"
+  />
+</svg>
+
+
+
+
+
+        {/* Badges */}
         {badges.map((badge, index) => (
           <motion.div
             key={index}
@@ -120,7 +232,7 @@ const Line = () => {
             <span>{badge.title}</span>
           </motion.div>
         ))}
-        </div>
+      </div>
     </div>
   );
 };
