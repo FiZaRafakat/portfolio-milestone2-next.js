@@ -7,26 +7,6 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 const portfolioProjects =[
     {
-       number : "01",
-        image : "/images/web.png",
-        title : "Comforty Marketplace",
-        description : `<span class="highlight">Comforty</span> is a modern, responsive furniture marketplace built with <span class="highlight">Next.js, Tailwind CSS</span>, and <span class="highlight">Sanity CMS</span>. It features smooth <span class="highlight">Framer Motion animations</span>, real-time <span class="highlight">CMS-powered content</span>, and dynamic product pages. Users can securely sign up or log in using <span class="highlight">Clerk authentication</span>, place orders with <span class="highlight">Stripe payment integration</span>, and receive <span class="highlight">email notifications</span> with order updates. A built-in order <span class="highlight">tracking system</span> keeps users informed, while an integrated <span class="highlight">chatbot</span> enhances support and engagement.`,
-        link : "https://comforty-marketplace.vercel.app/"
-    },{
-        number : "02",
-        image : "/images/1st image.png",
-        title : " Fiza’s Travel Assistance",
-        description : `<span class="highlight">AI Travel Planner Chatbot</span> is an intelligent travel assistant built using <span class="highlight">OpenAI’s Agents SDK</span> and <span class="highlight">Chainlit</span>. It interacts naturally with users to gather preferences like destination, travel dates, and budget, and responds with personalized travel plans. Powered by <span class="highlight">LLMs</span> and <span class="highlight">tool usage through agent actions</span>, it demonstrates how AI can automate real-world tasks with contextual memory, dynamic reasoning, and natural conversations. Chainlit provides a seamless chat UI, making the bot feel like a real travel advisor.`,
-        link : "https://fizarafakattravelassistant-production.up.railway.app/"
-    },   
-    {
-        number : '03',
-        image : "/images/dizzyblog.png",
-        title : "Dizzy Blog",
-        description : `<span class="highlight">DizzyBlog</span> is a beautifully designed, fully responsive blog platform built with <span class="highlight">Next.js</span> and <span class="highlight">Tailwind CSS</span>, enhanced with smooth <span class="highlight">AOS animations</span>. While the blog content is hardcoded for full design control, the <span class="highlight">comment system is dynamic and powered by Sanity CMS</span>, allowing users to add, update, and delete their comments in real time. With a focus on UI aesthetics, clean structure, and interactive features, DizzyBlog offers a polished reading and engagement experience.`,  
-        link : "https://dizzyblog.vercel.app/"
-    },
-    {
         number : "04",
         image : "/images/resume.png" ,
         title : "Resume Builder",
@@ -36,7 +16,7 @@ const portfolioProjects =[
     {
         number : "05",
         image : "/images/1-3d.png",            
-        title : "Interior Design Website",
+        title : "Interior Design",
         description : `<span class="highlight">Interior Design Website</span> is a modern and visually appealing web project built by converting a custom <span class="highlight">Figma layout</span> into responsive, production-ready code using <span class="highlight">Next.js</span> and <span class="highlight">Tailwind CSS</span>. The site features a clean and elegant UI, enhanced with smooth scroll-based <span class="highlight">AOS animations</span>, ensuring a polished and engaging user experience. With pixel-perfect design accuracy and fully responsive layouts, the project reflects my ability to transform creative concepts into high-performance, real-world websites.`,
         link : "https://interior-design-3-page.vercel.app"
     },
@@ -82,12 +62,12 @@ const ProjectSection = () => {
                    >
                      {/* Left Side */}
                      <div className="lg:px-8 md:p-3 py-2 px-4 md:w-1/2 sm:px-16 lg:h-[400px] md:h-[300px] ">
-                        <div className="inline-flex md:items-start items-center ">
+                        {/* <div className="inline-flex md:items-start items-center ">
                         <h2 className="lg:text-7xl md:text-4xl text-3xl mt-0  font-serif italic clip-text">{project.number}</h2>
-                        </div>
-                        <h2 className="lg:text-2xl italic sm:text-xl text-lg ">{project.title}</h2>
-                        <ScrollArea className="h-[100px] md:h-[135px] lg:h-[165px] sm:h-[160px] overflow-y-auto">
-                        <p className="whitespace-pre-line md:mt-3 sm:text-xs xl:text-base leading-relaxed text-[0.6rem] p"
+                        </div> */}
+                        <h2 className="lg:text-3xl italic sm:text-xl text-lg mt-4 ">{project.title}</h2>
+                        <ScrollArea className="h-[120px] md:h-[135px] lg:h-[190px] sm:h-[160px] overflow-y-auto">
+                        <p className="whitespace-pre-line md:mt-3 sm:text-xs  xl:text-base leading-relaxed text-xs p"
                          dangerouslySetInnerHTML={{ __html: project.description }}
                         ></p>                       
                         </ScrollArea>

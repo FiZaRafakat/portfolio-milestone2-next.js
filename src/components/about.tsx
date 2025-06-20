@@ -7,7 +7,6 @@ import { FaCreditCard } from "react-icons/fa";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineBubbleChart } from "react-icons/md";
 import { MdOutlineForum } from "react-icons/md";
-import Line from './line';
 import {motion} from 'framer-motion';
 
 const badges =[
@@ -122,14 +121,6 @@ whileHover={{ scale: 1.05 }}>
    
   </div>
 </div>
-  </div>
-
-  <div>
-    
-  </div>
-
-  <div className='mt-0 overflow-x-hidden z-10 md:block hidden'>
-   <Line />
   </div>
 </div>
 
