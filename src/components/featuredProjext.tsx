@@ -4,8 +4,6 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 
 const FeaturedProject = () => {
 
-  const initialPath = `M 10 100 Q 500 100 980 100`
-  const finalPath = `M 10 100 Q 500 100 980 100`
 
 
 
