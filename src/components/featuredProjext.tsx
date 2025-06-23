@@ -1,12 +1,74 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { BorderBeam } from "@/components/magicui/border-beam";
+import InteractiveString from './interactiveString';
+import { FaReact } from "react-icons/fa";;
+import { RiNextjsFill } from "react-icons/ri";
+import { SiOpenai, SiTailwindcss } from "react-icons/si";
+import { SiSanity } from "react-icons/si";
+import { BsStripe } from "react-icons/bs";
+import { SiClerk } from "react-icons/si";
+import { SiFramer } from "react-icons/si";
+import { SiGooglegemini } from "react-icons/si";
+import { SiRailway } from "react-icons/si";
+import Toolbox from './toolbox';
+
+const comfortyTools = [
+  {
+    iconType : FaReact ,
+    title : "React"
+  },{
+    iconType : RiNextjsFill ,
+    title : "Nextjs"
+  },{
+    iconType : SiTailwindcss,
+    title : "Tailwind CSS"
+  },{
+    iconType : SiSanity,
+    title : "Sanity"
+  },{
+    iconType : BsStripe,
+    title :"Stripe"
+  },{
+     iconType : SiClerk,
+     title : "Clerk"
+  },{
+     iconType : SiFramer,
+     title : "Framer Motion"
+  }
+]
+
+const blogTools = [
+  {
+    iconType : FaReact ,
+    title : "React"
+  },{
+    iconType : RiNextjsFill ,
+    title : "Nextjs"
+  },{
+    iconType : SiTailwindcss,
+    title : "Tailwind CSS"
+  },{
+    iconType : SiSanity,
+    title : "Sanity"
+  }
+]
+
+const travel_tools = [
+  {
+    iconType : SiOpenai,
+    title : "OpenAi"
+  },{
+    iconType : SiGooglegemini,
+    title : "Gemini"
+  },{
+   iconType : SiRailway, 
+   title : "Railway"
+  }
+]
+
 
 const FeaturedProject = () => {
-
-
-
-
   return (
     <div className='mt-20 px-4 sm:px-6 lg:px-8 max-w-5xl xl:max-w-[84rem] mx-auto relative z-10'>
 
@@ -32,7 +94,7 @@ const FeaturedProject = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8 }} className="mt-14 flex flex-col lg:flex-row gap-10 items-center justify-between">
+          transition={{ duration: 0.8 }} className="mt-8 flex flex-col lg:flex-row gap-10 items-start justify-between">
         
         {/* Left - Description */}
         <motion.div 
@@ -46,7 +108,6 @@ const FeaturedProject = () => {
           </p>
 
           <ul className="list-disc list-inside text-gray-400 space-y-1">
-            <li><strong>Tech Stack:</strong> Next.js, Tailwind CSS, Sanity CMS, Stripe, Clerk, Framer Motion</li>
             <li><strong>Authentication</strong> with secure Clerk login/signup flows</li>
             <li><strong>EmailJS Auto-Responses</strong> for user communication</li>
             <li><strong>Order Tracking</strong> integration for customer ease</li>
@@ -54,8 +115,12 @@ const FeaturedProject = () => {
             <li>Review system + Admin-friendly CMS</li>
             <li>Beautiful responsive design with animation</li>
           </ul>
+          <div className=' '>
+          <Toolbox items={comfortyTools} itemsWrapperClassName='animate-moveLeft [animation-duration:30s]' />
+          </div>
 
-          <motion.a 
+          <div className='flex justify-center items-center'>
+            <motion.a 
               href="https://comforty-marketplace.vercel.app"
               target="_blank"
               whileHover={{ scale: 1.08 }}
@@ -65,6 +130,7 @@ const FeaturedProject = () => {
             >
               Visit Live Site
             </motion.a>
+          </div>
 
         </motion.div>
 
@@ -115,15 +181,8 @@ const FeaturedProject = () => {
 
       </motion.div>
 
-      {/* svg */}
       <div>
-        <svg
-        width={1000}
-        height={100}
-        xmlns='http://www.w3.org/2000/svg'
-        >
-          <path d="M 10 100 Q 500 100 980 100" stroke='white' fill='transparent' />
-        </svg>
+       <InteractiveString />
       </div>
       
       {/* 2nd Project */}
@@ -131,7 +190,7 @@ const FeaturedProject = () => {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className='lg:text-6xl md:text-4xl text-3xl mt-20 italic text-white text-center lg:text-left'
+          className='lg:text-6xl md:text-4xl text-3xl mt-0 italic text-white text-center lg:text-left'
         >
           AI Travel Assistant
         </motion.h3>
@@ -141,7 +200,7 @@ const FeaturedProject = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8 }}
-          className="mt-14 flex flex-col lg:flex-row gap-10 items-center justify-between"
+          className="mt-8 flex flex-col lg:flex-row gap-10 items-start justify-between"
         >
           {/* Left - Description */}
           <motion.div 
@@ -155,7 +214,6 @@ const FeaturedProject = () => {
           </p>
 
           <ul className="list-disc list-inside text-gray-400 space-y-1">
-            <li><strong>Tech Stack:</strong> Chainlit, OpenAI Agents SDK, Gemini 2.0, Railway, Tailwind</li>
             <li><strong>Conversational UI</strong> powered by Chainlit with polite, human-like prompts</li>
             <li><strong>Personalized travel plans</strong> using dynamic reasoning and contextual memory</li>
             {/* <li><strong>Real-time tool usage</strong> via Agent Actions for destinations, dates, and budget</li> */}
@@ -163,16 +221,22 @@ const FeaturedProject = () => {
             <li>Fully deployed on Railway with instant access</li>
           </ul>
 
-          <motion.a 
+           <div className=' '>
+          <Toolbox items={travel_tools} itemsWrapperClassName='animate-moveLeft [animation-duration:30s]' />
+          </div>
+
+          <div className='flex justify-center items-center'>
+            <motion.a 
             href="https://fizarafakattravelassistant-production.up.railway.app" 
             target="_blank"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="inline-block px-5 py-3 bg-gradient-to-r from-sky-400 to-emerald-400 text-black font-semibold rounded-full hover:scale-105 transition"
+            className="px-5 py-3 bg-gradient-to-r from-sky-400 to-emerald-400 text-black font-semibold rounded-full hover:scale-105 transition inline-block"
           >
             Visit Live Site
           </motion.a>
+          </div>
         </motion.div>
 
 
@@ -205,13 +269,17 @@ const FeaturedProject = () => {
           </motion.div>
         </motion.div>
 
+        <div>
+       <InteractiveString />
+      </div>
+
 
       {/* 3rd Project */}
           <motion.h3
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className='lg:text-6xl md:text-4xl text-3xl mt-20 italic text-white text-center lg:text-left'
+            className='lg:text-6xl md:text-4xl text-3xl mt-0 italic text-white text-center lg:text-left'
           >
             DizzyBlog CMS
           </motion.h3>
@@ -221,7 +289,7 @@ const FeaturedProject = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.8 }}
-            className="mt-14 flex flex-col lg:flex-row gap-10 items-center justify-between"
+            className="mt-8 flex flex-col lg:flex-row gap-10 items-start justify-between"
           >
             {/* Left - Description */}
             <motion.div 
@@ -235,7 +303,6 @@ const FeaturedProject = () => {
             </p>
 
             <ul className="list-disc list-inside text-gray-400 space-y-1">
-              <li><strong>Tech Stack:</strong> Next.js, Tailwind CSS, AOS, Sanity CMS, React Icons</li>
               <li><strong>Comment system</strong> powered by Sanity — add, update, and delete in real-time</li>
               <li><strong>Beautiful AOS animations</strong> for page transitions and blog reveal</li>
               <li><strong>Clean, hardcoded blog content</strong> for total visual control</li>
@@ -243,7 +310,12 @@ const FeaturedProject = () => {
               <li>Interactive layout with a strong focus on user engagement</li>
             </ul>
 
-            <motion.a 
+            <div className=' '>
+          <Toolbox items={blogTools} itemsWrapperClassName='animate-moveLeft [animation-duration:30s]' />
+          </div>
+
+            <div className='flex justify-center items-center'>
+              <motion.a 
               href="https://dizzyblog.vercel.app" 
               target="_blank"
               whileHover={{ scale: 1.08 }}
@@ -253,6 +325,7 @@ const FeaturedProject = () => {
             >
               Visit Live Site
             </motion.a>
+            </div>
           </motion.div>
 
 
